@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        text-align: center;
+        background-color: rgb(255, 115, 0)
+    }   
+</style>
+
+<body>
+<div class="container">
+    <div>
+        <h1>MOVIE TICKET</h1>
+    </div>
+    <div>
+        <label for="">username</label>
+        <input type="text" id="username">
+        <br>
+        <label for="">password</label>
+        <input type="text" id="password">
+        <br>
+        <label for="">movie</label>
+        <select name="" id="movie">
+            <option value="kushi"> kushi</option>
+            <option value="salar">salar</option>
+            <option value="0G">og</option>
+            <option value="skandha">skandha</option>
+        </select>
+        <br>
+        <label for="">class</label>
+        <select name="" id="typeofclass">
+            <option value="200">diamond</option>
+            <option value="150">gold</option>
+            <option value="80">silver</option>
+            <option value="400">fan show</option>
+        </select>
+        <br>
+        <label for="">seats</label>
+        <select name="" id="seats">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+        </select>
+        <br>
+
+        <label for="" id="res"></label>
+        <button onclick="book"color="green">Ticket book</button>
+
+    </div>
+    </div>
+    <script>
+        var booknow = () => {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var movie = document.getElementById("movie").value;
+            var typeofclass = document.getElementById("class").value;
+            var pwd = username.substr(0, 3) + "123"
+            if (password == pwd) {
+                var amount = seats * typeofclass
+                total = amount + (amount * 0.05);
+                document.getElementById("res").innerHTML += "hey" + username + "tickets for" + movie + "booked,total amountto be paid" + total;
+            }
+            else {
+                document.getElementById("res").innerHTML = "please enter details correct"
+                document.getElementById("res").style.color = "red"
+            }
+        }
+    </script>
+</body>
+
+</html>

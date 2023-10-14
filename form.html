@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(156, 234, 234);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-centre">
+            <div class="col-md-3"></div>
+            <div class="col-md-4">
+                <h1>Login</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for=" " class="form-label">User name</label>
+                    <input type="text" name="" id="username" classs="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for=" " class="form-label">Password</label>
+                    <input type="text" name="" id="password" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="checklogin()">Login</button>
+                    <button class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><label for="" id="res"></label></div>
+        </div>
+    </div>
+    <script>
+        function checklogin() {
+            var uName, pwd;
+            uName = document.getElementById("username").value;
+            pwd = document.getElementById("password").value;
+            dbpass = uName.substr(0, 3) + "123"
+            if (pwd == dbpass) {
+                document.getElementById("res").innerHTML = "login successful";
+                document.getElementById("res").style.color = "green";
+            }
+            else {
+                document.getElementById("res").innerHTML = "login failed";
+                document.getElementById("res").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mobile(mobilename, mobileprice, mobilepro, mobilecam) {
+            this.mobilename = mobilename
+            this.mobileprice = mobileprice
+            this.mobilepro = mobilepro
+            this.mobilecam = mobilecam
+        }
+        var m1 = new mobile("one plus 9rt", 42000, "sp 9gen", "50mp");
+        var m2 = new mobile("pixel 10", 35000, "7gen", "60mp");
+        var m3 = new mobile("redmi", 65000, "8gen", "80mp");
+        var m4 = new mobile("oppo", 45000, "5gen", "100mp");
+        var store = [m1, m2, m3, m4]
+        for (newmobile of store) {
+
+            if (new mobile["mobileprice"] > 70000)
+             {
+                for (dummy in newmobile) {
+                    document.write(dummy + ":" + newmobile[dummy] + "<br>")
+
+                
+                // for (dummy in newmobile) 
+                // {
+
+                //     document.write(dummy + ":" + newmobile[dummy] + "</br>");
+                // }document.write("*****</br>")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
